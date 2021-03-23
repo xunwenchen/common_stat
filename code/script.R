@@ -16,17 +16,18 @@ summary(data$as)
 summary(data$sp)
 describe(data) # summarise and overview the data frame
 summary(data$rt_cd) # summary root cadmium concentration, you can do the same for other parameters. 
-                    # just change the code after $.
+# just change the code after $.
 
 # PCA ####
 # select data for PCA
 View(data)
-data_pca <- select(data, cd, as, sp, rt_ros, sht_ros, rt_antio, sht_antio) # here 4 variables are included, you will see 4 PC using summary(pc)
-                                               # you can add more or less. 
+data_pca <- select(data, cd, as, sp, rt_ros, sht_ros, rt_antio, sht_antio) 
+# here 4 variables are included, you will see 4 PC using summary(pc)
+# you can add more or less. 
 pc <- prcomp(data_pca [, -1:-3], # exclude column 1-3, they are factors only (cd, as and sp), no need.
-              center = TRUE,
-              scale. = TRUE) 
-                            
+             center = TRUE,
+             scale. = TRUE) 
+
 pc
 summary(pc) # get summary statistics
 plot(pc) # plot bar chart of pc
