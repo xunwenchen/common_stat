@@ -16,7 +16,7 @@ summary(data$as)
 summary(data$sp)
 describe(data) # summarise and overview the data frame
 summary(data$rt_cd) # summary root cadmium concentration, you can do the same for other parameters. 
-# just change the code after $.
+                    # just change the code after $.
 
 # PCA ####
 # select data for PCA
